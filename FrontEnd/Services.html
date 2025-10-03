@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Servecing.css">
+</head>
+<body>
+     <nav>
+    <a href="Home.html" class="company-name">
+      <img src="Group 2.png" alt="Safe Shake Logo" class="company-logo">
+      Safe Shake
+    </a>
+
+    <ul>
+      <li><a href="Home.html" class="links">Home</a></li>
+      <li><a href="Services.html" class="links">Services</a></li>
+      <li><a href="Home" class="links">Contact us</a></li>
+      <li><a href="Webapp" class="get-started">WebApp</a></li>
+      <li class="user-menu">
+        <button class="user-btn">
+          <img src="User@2x.png" class="User">
+          <img src="Dropdown.png" class="arrow">
+        </button>
+        <ul class="dropdown">
+          <!-- Populated by JS -->
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  
+  <script src="Home animation.js"></script>
+  <script src="Userbuttondropdown.js"></script>
+  <script>
+    // Scrollbar fade toggle
+    (function () {
+      const scroll = document.querySelector('.ai-scroll');
+      if (!scroll) return;
+
+      function checkScrollable() {
+        const scrollable = scroll.scrollWidth > scroll.clientWidth + 1;
+        scroll.classList.toggle('is-scrollable', scrollable);
+      }
+
+      window.addEventListener('load', checkScrollable);
+      window.addEventListener('resize', checkScrollable);
+    })();
+  </script>
+</body>
+</html>

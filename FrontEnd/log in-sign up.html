@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In / Sign Up</title>
+  <link rel="stylesheet" href="logging.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="Home.html" class="company-name">
+      <img src="Group 2.png" alt="Safe Shake Logo" class="company-logo">
+      Safe Shake
+    </a>
+
+    <ul>
+      <li><a href="Home.html" class="links">Home</a></li>
+      <li><a href="Services.html" class="links">Services</a></li>
+      <li><a href="Contact.html" class="links">Contact us</a></li>
+      <li><a href="Webapp.html" class="get-started">WebApp</a></li>
+      <li class="user-menu">
+        <button class="user-btn">
+          <img src="User@2x.png" class="User">
+          <img src="Dropdown.png" class="arrow">
+        </button>
+        <ul class="dropdown"><!-- JS will fill in --></ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Auth Wrapper -->
+  <section class="auth-wrapper">
+    <!-- Sign Up -->
+    <div class="auth-card active" id="signup-card">
+      <h2>Create Your Account</h2>
+      <p class="auth-subtitle">Join Safe Shake to get started quickly and securely.</p>
+
+      <!-- signup form -->
+      <form class="signup-form" onsubmit="event.preventDefault(); signup();">
+        <div class="form-group">
+          <label for="signup-email">Email address</label>
+          <input type="email" id="signup-email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="signup-password">Password</label>
+          <div class="input-with-icon">
+            <input type="password" id="signup-password" placeholder="Enter a password" required>
+            <span class="toggle-password" data-target="signup-password">👁️</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Confirm password</label>
+          <div class="input-with-icon">
+            <input type="password" id="confirm-password" placeholder="Re-enter your password" required>
+            <span class="toggle-password" data-target="confirm-password">👁️</span>
+          </div>
+        </div>
+
+        <button type="submit" class="auth-btn">Sign Up</button>
+      </form>
+
+      <div class="social-signup">
+        <p class="or-divider">Or sign up with</p>
+        <button class="social-btn google">
+          <img src="Google-Logo.png" alt="Google"> Continue with Google
+        </button>
+        <button class="social-btn github">
+          <img src="Github-logo.webp" alt="GitHub"> Continue with GitHub
+        </button>
+        <button class="social-btn facebook">
+          <img src="Facebook-logo.png" alt="Facebook"> Continue with Facebook
+        </button>
+      </div>
+
+      <div class="auth-extra">
+        <p>Already have an account? <a href="#" id="switch-to-login">Log in</a></p>
+      </div>
+    </div>
+
+    <!-- Log In -->
+    <div class="auth-card" id="login-card">
+      <h2>Welcome Back</h2>
+      <p class="auth-subtitle">Log in to continue where you left off.</p>
+
+      <!-- login form -->
+      <form class="login-form" onsubmit="event.preventDefault(); login();">
+        <div class="form-group">
+          <label for="login-email">Email address</label>
+          <input type="email" id="login-email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <div class="input-with-icon">
+            <input type="password" id="login-password" placeholder="Enter your password" required>
+            <span class="toggle-password" data-target="login-password">👁️</span>
+          </div>
+        </div>
+
+        <button type="submit" class="auth-btn">Log In</button>
+      </form>
+
+      <div class="social-signup">
+        <p class="or-divider">Or continue with</p>
+        <button class="social-btn google">
+          <img src="Google-Logo.png" alt="Google"> Google
+        </button>
+        <button class="social-btn github">
+          <img src="Github-logo.webp" alt="GitHub"> GitHub
+        </button>
+        <button class="social-btn facebook">
+          <img src="Facebook-logo.png" alt="Facebook"> Facebook
+        </button>
+      </div>
+
+      <div class="auth-extra">
+        <p><a href="#">Forgot your password?</a></p>
+        <p>Don’t have an account? <a href="#" id="switch-to-signup">Sign up</a></p>
+      </div>
+    </div>
+  </section>
+
+  <script src="Userbuttondropdown.js"></script>
+  <script src="Page-sign up:log in.js"></script>
+</body>
+</html>
